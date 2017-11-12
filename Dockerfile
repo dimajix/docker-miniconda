@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN REPO=http://cdn-fastly.deb.debian.org && \
     apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get -y install wget locales git bzip2 libtemplate-perl &&\
+    apt-get -y install wget locales git bzip2 libtemplate-perl sudo &&\
     /usr/sbin/update-locale LANG=C.UTF-8 && \
     locale-gen C.UTF-8 && \
     apt-get remove -y locales && \
