@@ -5,7 +5,7 @@ services:
   miniconda:
     container_name: dmx-miniconda
     hostname: miniconda
-    image: dimajix/miniconda:4.3.30
+    image: dimajix/miniconda:4.5.4
     build: 
       context: .
       args:

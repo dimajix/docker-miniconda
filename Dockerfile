@@ -1,10 +1,6 @@
 FROM debian:stretch 
 MAINTAINER Kaya Kupferschmidt <k.kupferschmidt@dimajix.de> 
 
-ARG ANACONDA_VERSION=4.3.30
-
-ENV ANACONDA_HOME=/opt/anaconda3
-
 # install nodejs, utf8 locale, set CDN because default httpredir is unreliable 
 ENV DEBIAN_FRONTEND noninteractive 
 RUN REPO=http://cdn-fastly.deb.debian.org && \
@@ -21,6 +17,9 @@ RUN REPO=http://cdn-fastly.deb.debian.org && \
 ENV LANG=C.UTF-8 \
     LANGUAGE=C.UTF-8 \
     LC_ALL=C.UTF-8
+
+ARG ANACONDA_VERSION=4.5.4
+ENV ANACONDA_HOME=/opt/anaconda3
 
 # install Python with conda 
 RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-${ANACONDA_VERSION}-Linux-x86_64.sh -O /tmp/miniconda.sh  && \
