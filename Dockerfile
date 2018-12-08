@@ -1,7 +1,7 @@
 FROM debian:stretch 
 MAINTAINER Kaya Kupferschmidt <k.kupferschmidt@dimajix.de> 
 
-ARG ANACONDA_VERSION=4.3.30
+ARG ANACONDA_VERSION=4.5.11
 
 ENV ANACONDA_HOME=/opt/anaconda3
 
